@@ -1,14 +1,15 @@
 #!usr/bin/python
 
-print("What is your password time delayed parameter preference?: ")
-TP = input()
-Password = input('Please Enter a Password -->  ')
+print('How long do you wish to wait between characters? (seconds) ')
+TimeParameter = input('-->  ')
+Password = input('Please enter a password with your chosen Time Parameter '
+                 'inbetween characters, example: (Pass5word) \n-->  ')
 
 
-print ("Please re-enter password -->   ")
-TimeDelay = str(input())
-if Password in TimeDelay:
-        print('It worked and recognized that you entered 5 as a time delay parameter')
+if TimeParameter in Password:
+        print('It worked and recognized that you entered (' + TimeParameter + ') as a time delay parameter')
 else:
-        print('The password did not recognize any time delay parameter or the passwords did not match')
+        print('Time Parameter within password NOT detected. \n '
+              'Example: If Time Parameter = 5'
+              'Then Password = Pass5word ')
 
