@@ -1,18 +1,92 @@
 #!usr/bin/python
 
-##setting time parameters with TimeParameter variable 
-print('How long do you wish to wait between characters? (seconds) ')
+import time
+import os
+
+clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
+
+clearConsole()
+print('''
+╭╮╱╭╮╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╭━━━━┳╮╱╱╱╱╭╮╱╭╮╱╭╮╱╱╭╮
+┃┃╱┃┃╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱┃╭╮╭╮┃┃╱╱╱╭╯╰╮┃┃╱┃┃╱╱┃┃
+┃╰━╯┣━━┳━━┫┃╭┳━━┳━┳━━╮╰╯┃┃╰┫╰━┳━┻╮╭╯┃╰━╯┣━━┫┃╭━━╮
+┃╭━╮┃╭╮┃╭━┫╰╯┫┃━┫╭┫━━┫╱╱┃┃╱┃╭╮┃╭╮┃┃╱┃╭━╮┃┃━┫┃┃╭╮┃
+┃┃╱┃┃╭╮┃╰━┫╭╮┫┃━┫┃┣━━┃╱╱┃┃╱┃┃┃┃╭╮┃╰╮┃┃╱┃┃┃━┫╰┫╰╯┃
+╰╯╱╰┻╯╰┻━━┻╯╰┻━━┻╯╰━━╯╱╱╰╯╱╰╯╰┻╯╰┻━╯╰╯╱╰┻━━┻━┫╭━╯
+╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃
+╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰╯''')
+
+##setting time parameters with TimeParameter variable
+print("\n\nWe are going to set up your Time-Delayed Password \n(Starting...)")
+time.sleep(7)
+clearConsole()
+print('''
+┏━━━┳━━━┳━━━┳━━━┓
+┃┏━┓┃┏━━┫┏━┓┣┓┏┓┃
+┃┗━┛┃┗━━┫┃╋┃┃┃┃┃┃
+┃┏┓┏┫┏━━┫┗━┛┃┃┃┃┃
+┃┃┃┗┫┗━━┫┏━┓┣┛┗┛┃
+┗┛┗━┻━━━┻┛╋┗┻━━━┛''')
+print("\n\n1. Choose how many seconds you wish to wait inbetween your passwords characters. "
+      "\n\n(Example 1: Enter '5' to wait 5 seconds inbetween each character that you put a '5' between in your password) ")
+time.sleep(20)
+clearConsole()
+print('''
+┏━━━┳━━━┳━━━┳━━━┓
+┃┏━┓┃┏━━┫┏━┓┣┓┏┓┃
+┃┗━┛┃┗━━┫┃╋┃┃┃┃┃┃
+┃┏┓┏┫┏━━┫┗━┛┃┃┃┃┃
+┃┃┃┗┫┗━━┫┏━┓┣┛┗┛┃
+┗┛┗━┻━━━┻┛╋┗┻━━━┛''')
+print("\n\nExample 2: If you choose '5' then you will create a password of 'Pass5word' or 'HT5H' or 'Jim5my' or something of that nature."
+      " Just be sure to include the time parameter that you set "
+      "\n\n(Starting...)")
+time.sleep(17)
+clearConsole()
+print('''
+╔════╦══╦═╗╔═╦═══╗
+║╔╗╔╗╠╣╠╣║╚╝║║╔══╝
+╚╝║║╚╝║║║╔╗╔╗║╚══╗
+──║║──║║║║║║║║╔══╝
+──║║─╔╣╠╣║║║║║╚══╗
+──╚╝─╚══╩╝╚╝╚╩═══╝''')
+print('\n\n2. How many seconds to wait inbetween characters? '
+      '\n\nExample 2: "Pass5word" will require you to wait >=5 seconds after entering "pass" before you can enter "word"')
 TimeParameter = input('-->  ')
-
+clearConsole()
+print('''
+╔═══╦═══╦═══╦═══╦╗╔╗╔╦═══╦═══╦═══╗
+║╔═╗║╔═╗║╔═╗║╔═╗║║║║║║╔═╗║╔═╗╠╗╔╗║
+║╚═╝║║─║║╚══╣╚══╣║║║║║║─║║╚═╝║║║║║
+║╔══╣╚═╝╠══╗╠══╗║╚╝╚╝║║─║║╔╗╔╝║║║║
+║║──║╔═╗║╚═╝║╚═╝╠╗╔╗╔╣╚═╝║║║╚╦╝╚╝║
+╚╝──╚╝─╚╩═══╩═══╝╚╝╚╝╚═══╩╝╚═╩═══╝''')
 ##user enters a password including the TimeParameter variable that they set. Example: Pass5word
-Password = input('Please enter a password with your chosen Time Parameter '
-                 'inbetween the characters, example: (Pass5word) \n-->  ')
-
+Password = input('\n\n3. Please enter a password with your chosen Time Parameter '
+                 'inbetween the characters. Example: (Pass5word) \n-->  ')
+clearConsole()
 ##checking if the time parameter was detected inside of the password
 if TimeParameter in Password:
-        print('It worked and recognized that you entered (' + TimeParameter + ') as a time delay parameter')
+    print('''
+╭━━━┳╮╱╭┳━━━┳━━━┳━━━┳━━━┳━━━╮
+┃╭━╮┃┃╱┃┃╭━╮┃╭━╮┃╭━━┫╭━╮┃╭━╮┃
+┃╰━━┫┃╱┃┃┃╱╰┫┃╱╰┫╰━━┫╰━━┫╰━━╮
+╰━━╮┃┃╱┃┃┃╱╭┫┃╱╭┫╭━━┻━━╮┣━━╮┃
+┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╰━━┫╰━╯┃╰━╯┃
+╰━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━╯''')
+    print('\n\nPassword successfully set to (' + Password + ') with a time delay of (' + TimeParameter + ').')
 else:
-        print('Time Parameter within password NOT detected. \n '
-              'Example: If Time Parameter = 5'
-              'Then Password = Pass5word ')
+    print('''
+╭━━━┳━━━┳━━┳╮╱╱╭━━━┳━━━╮
+┃╭━━┫╭━╮┣┫┣┫┃╱╱┃╭━━┻╮╭╮┃
+┃╰━━┫┃╱┃┃┃┃┃┃╱╱┃╰━━╮┃┃┃┃
+┃╭━━┫╰━╯┃┃┃┃┃╱╭┫╭━━╯┃┃┃┃
+┃┃╱╱┃╭━╮┣┫┣┫╰━╯┃╰━━┳╯╰╯┃
+╰╯╱╱╰╯╱╰┻━━┻━━━┻━━━┻━━━╯''')
+    print('\n\nTime Parameter NOT detected in password. \n '
+              '\nExample: If Time Parameter = "5" then the password should for EXAMPLE look like "Pass5word" ')
 
+if TimeParameter in Password:
+        print("\n\nPassword Set! You can close this window or restart the program")
+        print("\n\nThis is a BETA program and I am currently working on actually bringing it to life")
+        time.sleep(15)
