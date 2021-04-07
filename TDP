@@ -1,6 +1,9 @@
 #!usr/bin/python
 
-TimeDelay = ('5')
+print("What is your password time delayed parameter preference?")
+TP = input()
+
+TimeDelay = (TP)
 Password = input('Please Enter a Password -->  ')
 if Password in TimeDelay:
         print('It worked and recognized that you entered 5 as a time delay parameter')
