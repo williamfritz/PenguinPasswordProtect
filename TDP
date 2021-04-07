@@ -1,11 +1,14 @@
 #!usr/bin/python
 
+##setting time parameters with TimeParameter variable 
 print('How long do you wish to wait between characters? (seconds) ')
 TimeParameter = input('-->  ')
+
+##user enters a password including the TimeParameter variable that they set. Example: Pass5word
 Password = input('Please enter a password with your chosen Time Parameter '
-                 'inbetween characters, example: (Pass5word) \n-->  ')
+                 'inbetween the characters, example: (Pass5word) \n-->  ')
 
-
+##checking if the time parameter was detected inside of the password
 if TimeParameter in Password:
         print('It worked and recognized that you entered (' + TimeParameter + ') as a time delay parameter')
 else:
