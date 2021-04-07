@@ -1,0 +1,8 @@
+#!usr/bin/python
+
+TimeDelay = (5)
+Password = input('Please Enter a Password -->  ')
+if Password in TimeDelay:
+        print('It worked and recognized that you entered (5)')
+else:
+        print('did not worked')
