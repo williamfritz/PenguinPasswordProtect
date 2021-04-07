@@ -38,7 +38,7 @@ print('''
 ┃┏┓┏┫┏━━┫┗━┛┃┃┃┃┃
 ┃┃┃┗┫┗━━┫┏━┓┣┛┗┛┃
 ┗┛┗━┻━━━┻┛╋┗┻━━━┛''')
-print("\n\nExample 2: If you choose '5' then you will create a password of 'Pass5word' or 'HT5H' or 'Jim5my' or something of that nature."
+print("\n\nExample 2: If you choose '5' then you can create a password of 'Pass5word' or 'HT5H' or 'Jim5my' or something of that nature."
       " Just be sure to include the time parameter that you set "
       "\n\n(Starting...)")
 time.sleep(17)
@@ -51,7 +51,7 @@ print('''
 ──║║─╔╣╠╣║║║║║╚══╗
 ──╚╝─╚══╩╝╚╝╚╩═══╝''')
 print('\n\n2. How many seconds to wait inbetween characters? '
-      '\n\nExample 2: "Pass5word" will require you to wait >=5 seconds after entering "pass" before you can enter "word"')
+      '\n\nExample 2: "Pass5word" will require you to wait >= 5 seconds after entering "pass" before you can enter "word"')
 TimeParameter = input('-->  ')
 clearConsole()
 print('''
@@ -85,7 +85,8 @@ else:
 ╰╯╱╱╰╯╱╰┻━━┻━━━┻━━━┻━━━╯''')
     print('\n\nTime Parameter NOT detected in password. \n '
               '\nExample: If Time Parameter = "5" then the password should for EXAMPLE look like "Pass5word" ')
-
+    print("\n\nTRY AGAIN!")
+time.sleep(20)
 if TimeParameter in Password:
         print("\n\nPassword Set! You can close this window or restart the program")
         print("\n\nThis is a BETA program and I am currently working on actually bringing it to life")
