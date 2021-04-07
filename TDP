@@ -16,7 +16,7 @@ print('''
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰╯''')
 
-##setting time parameters with TimeParameter variable
+##Examples and rules
 print("\n\nWe are going to set up your Time-Delayed Password \n(Starting...)")
 time.sleep(7)
 clearConsole()
@@ -43,6 +43,7 @@ print("\n\nExample 2: If you choose '5' then you can create a password of 'Pass5
       "\n\n(Starting...)")
 time.sleep(17)
 clearConsole()
+##setting time parameters with a variable im calling TimeParameter
 print('''
 ╔════╦══╦═╗╔═╦═══╗
 ║╔╗╔╗╠╣╠╣║╚╝║║╔══╝
@@ -54,6 +55,7 @@ print('\n\n2. How many seconds to wait inbetween characters? '
       '\n\nExample 2: "Pass5word" will require you to wait >= 5 seconds after entering "pass" before you can enter "word"')
 TimeParameter = input('-->  ')
 clearConsole()
+##setting password
 print('''
 ╔═══╦═══╦═══╦═══╦╗╔╗╔╦═══╦═══╦═══╗
 ║╔═╗║╔═╗║╔═╗║╔═╗║║║║║║╔═╗║╔═╗╠╗╔╗║
@@ -65,6 +67,7 @@ print('''
 Password = input('\n\n3. Please enter a password with your chosen Time Parameter '
                  'inbetween the characters. Example: (Pass5word) \n-->  ')
 clearConsole()
+
 ##checking if the time parameter was detected inside of the password
 if TimeParameter in Password:
     print('''
@@ -74,8 +77,14 @@ if TimeParameter in Password:
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱╭┫╭━━┻━━╮┣━━╮┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╰━━┫╰━╯┃╰━╯┃
 ╰━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━╯''')
+
     print('\n\nPassword successfully set to (' + Password + ') with a time delay of (' + TimeParameter + ').')
+    print("\n\nYou can close this window or restart the program")
+    print("\n\nThis is a BETA program and I am currently working on actually bringing it to life"
+          "\n\nThanks for the support!")
+    time.sleep(15)
 else:
+    ##setting error messages
     print('''
 ╭━━━┳━━━┳━━┳╮╱╱╭━━━┳━━━╮
 ┃╭━━┫╭━╮┣┫┣┫┃╱╱┃╭━━┻╮╭╮┃
