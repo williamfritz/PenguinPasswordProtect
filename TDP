@@ -7,6 +7,7 @@ clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 def clearConsole():
     os.system('cls' if os.name=='nt' else 'clear')
 
+
 clearConsole()
 print('''
 ╭╮╱╭╮╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╭━━━━┳╮╱╱╱╱╭╮╱╭╮╱╭╮╱╱╭╮
@@ -64,6 +65,7 @@ print('''
 print('\n\n2. How many seconds to wait inbetween characters? '
       '\n\nExample 2: "Pass5word" will require you to wait >= 5 seconds after entering "pass" before you can enter "word"')
 TimeParameter = input('-->  ')
+new_TimeParameter = TimeParameter.replace('()', '')
 clearConsole()
 ##setting password
                                                              ##setting password
@@ -78,6 +80,9 @@ print('''
 ##user enters a password including the TimeParameter variable that they set. Example: Pass5word
 Password = input('\n\n3. Please enter a password with your chosen Time Parameter '
                  'inbetween the characters and be sure to include parenthesese. Example: (Pass(5)word) \n-->  ')
+new_password = Password.replace('5', '',)
+
+
 clearConsole()
 
 ##checking if the time parameter was detected inside of the password
@@ -90,8 +95,8 @@ if TimeParameter in Password:
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱╭┫╭━━┻━━╮┣━━╮┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╰━━┫╰━╯┃╰━╯┃
 ╰━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━╯''')
-    print('\n\nPassword successfully set to (' + Password + ') with a time delay of (' + TimeParameter + ').')
-    print('\n\nNow when you enter your password of (' + Password + ') you will have to wait (' + TimeParameter + ') seconds before continuing entering your password')
+    print('\n\nPassword successfully set to (' + new_password + ') with a time delay of (' + TimeParameter + ').')
+    print('\n\nNow when you enter your password of (' + new_password + ') you will have to wait (' + TimeParameter + ') seconds inbetween your chosen characters before continuing entering your password')
     print("\n\nYou can close this window or restart the program")
     print("\n\nThis is a BETA program and I am currently working on actually bringing it to life"
           "\n\nThanks for the support!")
