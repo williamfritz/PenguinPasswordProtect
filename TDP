@@ -3,6 +3,8 @@ import os
 import string
 from tkinter import *
 
+
+
 clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 def clearConsole():
     os.system('cls' if os.name=='nt' else 'clear')
@@ -46,8 +48,8 @@ print('''
 ┃┏┓┏┫┏━━┫┗━┛┃┃┃┃┃
 ┃┃┃┗┫┗━━┫┏━┓┣┛┗┛┃
 ┗┛┗━┻━━━┻┛╋┗┻━━━┛''')
-print("\n\nExample 2: If you choose '5' then you can create a password of 'Pass(5)word' or 'HT(5)H' or 'Jim(5)my' or something of that nature."
-      " Just be sure to include the parenthesese and time that you wish to delay continuation"
+print("\n\n2. Example 2: If you choose '5' then you can create a password of 'Pass(5)word' or 'H(5)T(5)H' or 'Jim(5)my' or something of that nature."
+      "\n\nJust be sure to include the parenthesese and time that you wish to delay before you enter the next character"
       "\n\n(Starting...)")
 time.sleep(7)
 
@@ -62,8 +64,8 @@ print('''
 ──║║──║║║║║║║║╔══╝
 ──║║─╔╣╠╣║║║║║╚══╗
 ──╚╝─╚══╩╝╚╝╚╩═══╝''')
-print('\n\n2. How many seconds to wait inbetween characters? '
-      '\n\nExample 2: "Pass5word" will require you to wait >= 5 seconds after entering "pass" before you can enter "word"')
+print('\n\n3. How many seconds to wait inbetween characters? '
+      '\n\nExample 3: "Pass(5)word" will require you to wait at least 5 seconds after entering "pass" before you can enter "word"')
 TimeParameter = input('-->  ')
 new_TimeParameter = TimeParameter.replace('()', '')
 clearConsole()
@@ -77,15 +79,16 @@ print('''
 ║║──║╔═╗║╚═╝║╚═╝╠╗╔╗╔╣╚═╝║║║╚╦╝╚╝║
 ╚╝──╚╝─╚╩═══╩═══╝╚╝╚╝╚═══╩╝╚═╩═══╝''')
 
-##user enters a password including the TimeParameter variable that they set. Example: Pass5word
+##user enters a password including the TimeParameter variable that they set. Example: Pass(5)word
 Password = input('\n\n3. Please enter a password with your chosen Time Parameter '
                  'inbetween the characters and be sure to include parenthesese. Example: (Pass(5)word) \n-->  ')
-new_password = Password.replace('5', '',)
+new_password = Password.replace('5', 'Wait ' + TimeParameter + ' Seconds',)
 
 
 clearConsole()
 
 ##checking if the time parameter was detected inside of the password
+
                                                              ##checking if the time parameter was detected inside of the password
 if TimeParameter in Password:
     print('''
@@ -95,30 +98,120 @@ if TimeParameter in Password:
 ╰━━╮┃┃╱┃┃┃╱╭┫┃╱╭┫╭━━┻━━╮┣━━╮┃
 ┃╰━╯┃╰━╯┃╰━╯┃╰━╯┃╰━━┫╰━╯┃╰━╯┃
 ╰━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━╯''')
-    print('\n\nPassword successfully set to (' + new_password + ') with a time delay of (' + TimeParameter + ').')
-    print('\n\nNow when you enter your password of (' + new_password + ') you will have to wait (' + TimeParameter + ') seconds inbetween your chosen characters before continuing entering your password')
+    print('\n\nPassword successfully set to ' + new_password + ' with a time delay of ' + TimeParameter + '.')
+    print('\n\nNow when you enter your password of ' + new_password + ' you will have to wait ' + TimeParameter + ' seconds inbetween your chosen characters before continuing entering your password')
     print("\n\nYou can close this window or restart the program")
     print("\n\nThis is a BETA program and I am currently working on actually bringing it to life"
           "\n\nThanks for the support!")
-    time.sleep(15)
-    time.sleep(5)
-else:
-    ##setting error messages
-                                                             ##setting error messages
-    print('''
-╭━━━┳━━━┳━━┳╮╱╱╭━━━┳━━━╮
-┃╭━━┫╭━╮┣┫┣┫┃╱╱┃╭━━┻╮╭╮┃
-┃╰━━┫┃╱┃┃┃┃┃┃╱╱┃╰━━╮┃┃┃┃
-┃╭━━┫╰━╯┃┃┃┃┃╱╭┫╭━━╯┃┃┃┃
-┃┃╱╱┃╭━╮┣┫┣┫╰━╯┃╰━━┳╯╰╯┃
-╰╯╱╱╰╯╱╰┻━━┻━━━┻━━━┻━━━╯''')
-    print('\n\nTime Parameter NOT detected in password. \n '
-              '\nExample: If Time Parameter = "5" then the password should for EXAMPLE look like "Pass5word" ')
-    print("\n\nTRY AGAIN!")
-time.sleep(20)
-if TimeParameter in Password:
-        print("\n\nPassword Set! You can close this window or restart the program")
-        print("\n\nThis is a BETA program and I am currently working on actually bringing it to life")
-        time.sleep(15)
-time.sleep(5)
 
+    time.sleep(1)
+
+
+
+
+def TimeParameter():
+    if sleep(10):
+        TimeParameter = True
+
+
+def special2_chars():
+    if time.sleep(5):
+        special2_chars = True
+
+
+def click():
+    username = username_box.get()
+    password = pw_box.get()
+
+    ##I was working on inputing a variable (TimeParameter) into a function (sleep)
+    ## so I can input the timeparameter into the sleep function while the
+    ## timeparameter var comes from previous user input
+
+    users = ['HTH']
+    caps = string.ascii_uppercase
+    numbers = []
+    for i in range(10):
+        numbers.append(str(i))
+    special_chars = ['!', '@', '#', '$']
+    special_chars2 = TimeParameter
+    name_check = False
+
+    def name_available(name):
+        if name.title() in users:
+            return False
+        else:
+            return True
+
+    ##trying to turn this 'char' into a wait condition check.
+    ## (DID user wait 'such and such' amount of time)
+
+    def special2_found(pw):
+        found = False
+        for char in special_chars:
+            if pw.find(char) > -1:
+                found = True
+        return found
+
+
+## I'm only using these if statements (below) to let me know if the wait condition is being fetched.
+## Right now it's fetching whether or not the entered password has a special character in it... (No good)
+
+    if not special2_found(password):
+        output.configure(text="Password has waited 10 seconds (Not Found)")
+    if special2_found(password):
+        output.configure(text="Password has waited 10 seconds (Found)")
+
+while ( running ):
+    for event in special2_chars():
+        if ( event.type == special2_chars.QUIT):
+            running = False
+        if ( event.type == special2_chars.KEYDOWN):
+            if ( event.key == special2_chars.K_a):
+                print ("You pressed the A key")
+
+
+window = Tk()
+window.title("Create an account")
+window.configure(bg="grey")
+
+Label(window, text="Enter your username:", bg="grey", fg='white', font="none 12 bold") \
+    .grid(row=1, column=0, sticky=EW, pady=8)
+Label(window, text="Enter your password:", bg="grey", fg='white', font="none 12 bold") \
+    .grid(row=3, column=0, sticky=EW, pady=8)
+
+username_box = Entry(window, width=40, bg="white")
+username_box.grid(row=2, column=0)
+
+pw_box = Entry(window, width=40, bg="white")
+pw_box.grid(row=4, column=0)
+
+Button(window, text="SUBMIT", width=6, command=click).grid(row=7, column=0, pady=10)
+
+output = Label(window, text="", bg="grey", fg="white", font="none 12", width=60)
+output.grid(row=8, column=0, sticky=EW, pady=10)
+
+window.mainloop()
+
+ws = Tk()
+ws.title('Crack It!')
+ws.geometry('400x300')
+ws.config(bg='#84BF04')
+
+message = '''
+  Dear Reader,
+
+      You have cracked it!
+
+  Congrats!
+  - HackersThatHelp  '''
+
+text_box = Text(
+    ws,
+    height=12,
+    width=40
+)
+text_box.pack(expand=True)
+text_box.insert('end', message)
+text_box.config(state='disabled')
+
+ws.mainloop()
